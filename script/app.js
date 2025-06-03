@@ -20,6 +20,15 @@ document.addEventListener("keydown", function () {
   }
 });
 
+window.addEventListener("click", function () {
+  if (gameStarted == false) {
+    //Only one time game start after starting the game
+    console.log("Game Start");
+    gameStarted = true;
+    h3.classList.remove("war");
+    levelUp();
+  }
+});
 // Flash Button
 
 function btnFlash(btn) {
