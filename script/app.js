@@ -73,8 +73,8 @@ function checkSeq(idx) {
     setTimeout(function () {
       document.querySelector("body").style.backgroundColor = "bisque";
     }, 200);
-    if (highScore < levelCount) {
-      highScore = levelCount;
+    if (highScore < levelCount-1) {
+      highScore = levelCount-1;
       h4.innerText = `High Score ${highScore}`;
     }
     reset();
