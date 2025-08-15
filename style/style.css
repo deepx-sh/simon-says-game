@@ -71,3 +71,24 @@ body{
 .war{
     color: red;
 }
+
+.controls{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.controls button{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #007BFF;
+    color: #FFF;
+    transition: background-color 0.2s;
+}
+
+.controls button:hover{
+    background-color: #0056b3;
+}
