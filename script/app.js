@@ -10,25 +10,30 @@ let gameStarted = false;
 
 let h3 = document.querySelector("h3");
 let h4 = document.querySelector("h4");
-document.addEventListener("keydown", function () {
-  if (gameStarted == false) {
-    //Only one time game start after starting the game
-    console.log("Game Start");
-    gameStarted = true;
-    h3.classList.remove("war");
-    levelUp();
-  }
-});
 
-window.addEventListener("click", function () {
-  if (gameStarted == false) {
-    //Only one time game start after starting the game
-    console.log("Game Start");
+let startBtn = document.getElementById("startBtn");
+let stopBtn = document.getElementById("stopBtn");
+
+startBtn.addEventListener("click", startGame);
+stopBtn.addEventListener("click", stopGame);
+
+function startGame() {
+  if (!gameStarted) {
     gameStarted = true;
+    levelCount = 0;
+    userSeq = [];
+    computerSeq = [];
     h3.classList.remove("war");
+    h4.innerText = `High Score ${highScore}`;
     levelUp();
   }
-});
+}
+
+function stopGame() {
+    h3.classList.add("war");
+  h3.innerText = `Game Stopped | Your Score: ${levelCount - 1}`;
+  reset();
+}
 // Flash Button
 
 function btnFlash(btn) {
@@ -68,7 +73,7 @@ function checkSeq(idx) {
     }
   } else {
     h3.classList.add("war");
-    h3.innerText = `Game over Your Score is ${levelCount} Press any key to start again`;
+    h3.innerText = `Game over Your Score is ${levelCount-1} Press start button to start again`;
     document.querySelector("body").style.backgroundColor = "red";
     setTimeout(function () {
       document.querySelector("body").style.backgroundColor = "bisque";
