@@ -30,6 +30,10 @@ function startGame() {
 }
 
 function stopGame() {
+  if (highScore < levelCount-1) {
+      highScore = levelCount-1;
+      h4.innerText = `High Score ${highScore}`;
+    }
     h3.classList.add("war");
   h3.innerText = `Game Stopped | Your Score: ${levelCount - 1}`;
   reset();
