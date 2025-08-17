@@ -83,16 +83,20 @@ body{
 }
 
 .controls button{
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 50px;
+    font-weight: bold;
     border: none;
-    background-color: #007BFF;
+    background: linear-gradient(135deg, #007BFF, #00D4FF);
     color: #FFF;
-    transition: background-color 0.2s;
+    border: none;
+    cursor: pointer;
+    transition:0.2s;
 }
 
 .controls button:hover{
-    background-color: #0056b3;
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #FF512F, #DD2476);
 }
