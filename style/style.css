@@ -100,3 +100,12 @@ body{
     transform: scale(1.1);
     background: linear-gradient(135deg, #FF512F, #DD2476);
 }
+
+.btn{
+    transition: all 0.2s;
+}
+
+.btn:active, .flash{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px white;
+}
