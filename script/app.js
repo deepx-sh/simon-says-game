@@ -25,6 +25,7 @@ function startGame() {
     computerSeq = [];
     h3.classList.remove("war");
     h4.innerText = `High Score ${highScore}`;
+    startBtn.classList.add("disabled")
     levelUp();
   }
 }
@@ -33,7 +34,8 @@ function stopGame() {
   if (highScore < levelCount-1) {
       highScore = levelCount-1;
       h4.innerText = `High Score ${highScore}`;
-    }
+  }
+  startBtn.classList.remove("disabled")
     h3.classList.add("war");
   h3.innerText = `Game Stopped | Your Score: ${levelCount - 1}`;
   reset();
@@ -76,6 +78,8 @@ function checkSeq(idx) {
       setTimeout(levelUp, 1000);
     }
   } else {
+      startBtn.classList.remove("disabled")
+
     h3.classList.add("war");
     h3.innerText = `Game over Your Score is ${levelCount-1} Press start button to start again`;
     document.querySelector("body").style.backgroundColor = "red";
