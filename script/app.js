@@ -4,13 +4,17 @@ let computerSeq = [];
 let btn = ["yellow", "red", "green", "blue"]; //random button flash
 // This two array used for compare the sequence
 
-let highScore = 0;
+
+let highScore = localStorage.getItem("highScore") ? parseInt(localStorage.getItem("highScore")) : 0;
+
+// let highScore = 0;
 let levelCount = 0;
 let gameStarted = false;
 
 let h3 = document.querySelector("h3");
 let h4 = document.querySelector("h4");
 
+h4.textContent = `High Score ${highScore}`
 let startBtn = document.getElementById("startBtn");
 let stopBtn = document.getElementById("stopBtn");
 
@@ -33,7 +37,8 @@ function startGame() {
 function stopGame() {
   if (highScore < levelCount-1) {
       highScore = levelCount-1;
-      h4.innerText = `High Score ${highScore}`;
+    h4.innerText = `High Score ${highScore}`;
+    localStorage.setItem("highScore", highScore);
   }
   startBtn.classList.remove("disabled")
     h3.classList.add("war");
@@ -89,6 +94,7 @@ function checkSeq(idx) {
     if (highScore < levelCount-1) {
       highScore = levelCount-1;
       h4.innerText = `High Score ${highScore}`;
+      localStorage.setItem("highScore", highScore);
     }
     reset();
   }
