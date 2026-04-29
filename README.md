@@ -2,7 +2,7 @@
 
 A fun memory game where players repeat a growing sequence of colors.
 
-## 🔹 Features
+## Features
 
 - Interactive gameplay with color buttons
 - JavaScript-powered color sequence
