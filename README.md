@@ -1,4 +1,4 @@
-# 🎮 Simon Says Game
+# Simon Says Game
 
 A fun memory game where players repeat a growing sequence of colors.
 
@@ -10,11 +10,11 @@ A fun memory game where players repeat a growing sequence of colors.
 - Score and high score tracking
 - Fully responsive UI
 
-## 🚀 Live Site
+## Live Site
 
 [Play Now](https://deepx-sh.github.io/simon-says-game/)
 
-## 🛠️ Tech Used
+## Tech Used
 
 - HTML
 - CSS
